@@ -1,0 +1,22 @@
+<!-- modal.component.html -->
+<div class="modal">
+    <h2>Endorsement Form</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="endorsement.name" required>
+  
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" [(ngModel)]="endorsement.company" required>
+  
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="endorsement.title" required>
+  
+      <label for="duration">Relationship Duration:</label>
+      <input type="text" id="duration" name="duration" [(ngModel)]="endorsement.duration" required>
+  
+      <label for="referral">Referral:</label>
+      <input type="text" id="referral" name="referral" [(ngModel)]="endorsement.referral" required>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>

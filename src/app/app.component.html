@@ -9,42 +9,43 @@
   <!-- Add your additional head elements (stylesheets, scripts, etc.) here -->
 </head>
 
-<body>
-
-  <div class="container">
-    <!-- Sidebar (25% of the page) -->
-    <div class="sidebar">
-      <!-- Circular profile picture -->
-      <div class="profile-pic">
-        <img src="assets/mikeCat.jpg">
-      </div>
-
-      <!-- Your Name and General Info -->
-      <h1>Tristin Rybak</h1>
-      <p>Full Stack Software Engineer</p>
-
-      
-    </div>
-
+<body style="margin: 0;">
     <!-- Main content area (75% of the page) -->
     <div class="main-content">
       <!-- Navigation Links -->
-      <nav>
-        <ul>
-          <li><a routerLink="/">About</a></li>
-          <li><a routerLink="/tech-stack">Tech Stack</a></li>
-          <li><a routerLink="/projects">Projects</a></li>
-          <li><a routerLink="/references">References</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-        </ul>
+      <nav id="desktop-nav">
+        <div class="logo">Tristin Rybak: Software Engineer</div>
+        <div>
+          <ul class="nav-links">
+            <li><a routerLink="/">About</a></li>
+            <li><a routerLink="/tech-stack">Experience</a></li>
+            <li><a routerLink="/projects">Projects</a></li>
+            <li><a routerLink="/references">References</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Tristin Rybak</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a routerLink="/" (click)="toggleMenu()">About</a></li>
+            <li><a routerLink="/tech-stack" (click)="toggleMenu()">Expierience</a></li>
+            <li><a routerLink="/projects" (click)="toggleMenu()">Projects</a></li>
+            <li><a routerLink="/references" (click)="toggleMenu()">References</a></li>
+            <li><a routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
       </nav>
       <!-- Router Outlet for dynamic content -->
       <router-outlet></router-outlet>
+      <app-chatbox></app-chatbox>
     </div>
-  </div>
-
   <!-- Add your additional body elements (scripts, etc.) here -->
-
 </body>
-
 </html>

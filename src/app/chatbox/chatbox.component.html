@@ -1,0 +1,29 @@
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<div class="show-chatbot" [ngClass]="{ 'show-chatbot': isChatboxOpen }">
+    <button class="chatbot-toggler" (click)="toggleChatbox()">
+        <span class="material-symbols-outlined">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>Twistin - Chatbot</h2>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Yo!<br> Thanks for visiting the site!</p>
+            </li>
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>What brings you in today?</p>
+            </li>
+            <li class="chat outgoing">
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." required></textarea>
+            <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+    </div>
+</div>
