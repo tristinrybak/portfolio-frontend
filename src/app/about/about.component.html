@@ -1,1 +1,88 @@
-<p>about works!</p>
+<!-- about.component.html -->
+  <section id="profile">
+    <div class="section_pic_container">
+      <img src="./assets/jedi_tristin.png" alt="Tristin Rybak Profile Picture">
+    </div>
+    <div class="section_text">
+      <p class="section_text_p1">Hello, I'm</p>
+      <h1 class="title">Tristin Rybak</h1>
+      <p class="section_text_p2">THE Software Engineer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Tristin Rybak - Industry Resume (1).pdf')">Download CV</button>
+        <button class="btn btn-color-1" (click)="toggleChatbox()">Let's Chat</button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png"
+          alt="My LinkedIn Profile"
+          class="icon" 
+          onclick="location.href='https://www.linkedin.com/in/tristin-rybak-4ab316195/'"
+        />
+        <img src="./assets/github.png"
+          alt="My GitHub Profile"
+          class="icon" 
+          onclick="location.href='https://www.github.com'"
+        />
+      </div>
+    </div>
+    <div class="arrow-container" (click)="scrollToAboutSection()">
+      <p class="section__text__p1">Get To Know More</p>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+      />
+    </div>
+  </section>
+  <section id="about">
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img
+          src="./assets/about-pic (2).png"
+          alt="Profile picture"
+          class="about-pic"
+        />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img
+              src="./assets/experience.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <h3>Experience</h3>
+            <div class="columns-container">
+              <div class="column">
+                <p>6+ years <br />Software Development</p>
+              </div>
+              <div class="column">
+                <p>2+ years <br />Cloud Solutions Engineering</p>
+              </div>
+            </div>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/education.png"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Education</h3>
+            <div class="columns-container">
+              <div class="column">
+                <p>B.Sc. Software Engineering</p>
+              </div>
+              <div class="column">
+                <p>Minor in <br />Cyber Security & Comp Sci</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            As a seasoned cloud developer specializing in AWS, I bring a passion for innovation and problem-solving to every project I undertake. Beyond my expertise in the digital realm, I'm also an avid kayaker who finds solace and inspiration in nature's beauty. A devoted family man, I cherish the moments spent with my loved ones. My enthusiasm for technology stems from a desire to create avenues of escape from reality for others, mirroring the way Star Wars captivates imaginations and transports us to distant galaxies. Whether crafting cutting-edge solutions in the cloud or paddling through serene waters, I am driven by a commitment to making a meaningful impact in both the digital and personal spheres of life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
